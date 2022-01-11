@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
+:root {
+  --bg-yellow: #c8ba01;
+  --bg-light: #c2bab1;
+  --bg-dark: #1c1c1a;
+  --bg-gray: #686666;
+  --bg-red: #cb2322;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--bg-light);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: url("pen.png"), default;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--bg-gray);
+  z-index: 10;
+}
+
+header span {
+  font-family: UnifrakturMaguntia;
+  font-size: 2rem;
+  color: var(--bg-dark);
+}
+
+.container {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .home {
+  width: 100%;
+}
+
+.container .home .top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--bg-dark);
+}
+
+.container .home .top span {
+  color: var(--bg-light);
+  font-family: 'Pirata One';
+  font-size: 20rem;
+}
+
+.container .home .bottom {
+  width: 100%;
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--bg-dark);
+}
+
+.container .home .bottom .left {
+  padding-right: 2rem;
+  margin-right: 2rem;
+  border-right: 1px solid var(--bg-gray);
+}
+
+.container .home .bottom .left h2 {
+  font-family: 'Archivo Black';
+  font-size: 6rem;
+}
+
+.container .home .bottom .left > p::first-letter {
+  font-family: 'UnifrakturMaguntia';
+  font-size: 4rem;
+  color: var(--bg-light);
+  background-color: var(--bg-dark);
+}
+
+.container .home .bottom .left > p {
+  max-width: 100%;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.container .home .bottom .left .skills {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--bg-dark);
+}
+
+.container .home .bottom .left .skills p {
+  color: var(--bg-light);
+  font-size: 1.5rem;
+}
+
+.container .home .bottom .right {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid var(--bg-dark);
+}
+
+.container .home .bottom .right:hover img {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+.container .home .bottom .right img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.container .contact {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  border-top: 1px var(--bg-dark) solid;
+  border-bottom: 1px var(--bg-dark) solid;
+}
+
+.container .contact:hover .animated-text {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.container .contact .animated-text {
+  width: 300%;
+  padding: 1rem 0;
+  -webkit-animation: text-scrolling 10s linear infinite;
+          animation: text-scrolling 10s linear infinite;
+  will-change: transform;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.container .contact .animated-text span:first-of-type {
+  padding: 0 2rem;
+  color: var(--bg-dark);
+  font-size: 2rem;
+  font-family: 'Archivo Black';
+}
+
+.container .contact .animated-text span:last-of-type {
+  padding: 1rem 2rem;
+  color: var(--bg-light);
+  font-size: 2rem;
+  font-family: 'Archivo Black';
+  background-color: var(--bg-dark);
+}
+
+footer {
+  width: 100%;
+  height: 10%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer span {
+  font-size: 1rem;
+  color: var(--bg-dark);
+}
+
+footer span a {
+  position: relative;
+  text-decoration: none;
+  color: var(--bg-dark);
+}
+
+footer span a::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  background-color: var(--bg-dark);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+footer span a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+footer .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+footer .socials a {
+  position: relative;
+  color: var(--bg-dark);
+  font-size: 1rem;
+  font-family: 'Archivo Black';
+  text-decoration: none;
+}
+
+footer .socials a::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  background-color: var(--bg-dark);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+footer .socials a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+@-webkit-keyframes text-scrolling {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes text-scrolling {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header span {
+    font-size: 1rem;
+  }
+  .container {
+    padding: 1rem;
+  }
+  .container .home .top span {
+    font-size: 6rem;
+  }
+  .container .home .bottom {
+    padding: 0;
+    margin-bottom: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .container .home .bottom .left {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  footer span {
+    font-size: 0.5rem;
+  }
+}
+/*# sourceMappingURL=index.css.map */
