@@ -65,6 +65,8 @@ header {
         color: var(--bg-light);
         font-family: 'Pirata One';
         font-size: 20rem;
+        opacity: 0;
+        animation: show-text 2s ease-in forwards;
       }
     }
     .bottom {
@@ -74,6 +76,7 @@ header {
       justify-content: space-between;
       color: var(--bg-dark);
       .left {
+        width: 60%;
         padding-right: 2rem;
         margin-right: 2rem;
         border-right: 1px solid var(--bg-gray);
@@ -104,6 +107,7 @@ header {
         }
       }
       .right {
+        width: 40%;
         padding: 2rem;
         display: flex;
         justify-content: center;
@@ -115,8 +119,7 @@ header {
           }
         }
         img {
-          max-width: 100%;
-          max-height: 100%;
+          width: 100%;
         }
       }
     }
@@ -220,6 +223,14 @@ footer {
     }
   }
 }
+@keyframes show-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 @keyframes text-scrolling {
   0% {
@@ -230,7 +241,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 810px) {
   header {
     span {
       font-size: 1rem;
@@ -246,9 +257,13 @@ footer {
       margin-bottom: 1rem;
       flex-direction: column-reverse;
       .left {
+        width: 100%;
         margin: 0;
         padding: 0;
         border: none;
+      }
+      .right {
+        width: 100%;
       }
     }
   }
