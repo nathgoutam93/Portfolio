@@ -33,6 +33,11 @@ body {
   cursor: url("pen.png"), default;
 }
 
+main {
+  max-width: 1920px;
+  margin: auto;
+}
+
 header {
   position: -webkit-sticky;
   position: sticky;
@@ -107,14 +112,13 @@ header span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   color: var(--bg-dark);
 }
 
 .container .home .bottom .left {
-  width: 60%;
   padding-right: 2rem;
   margin-right: 2rem;
   border-right: 1px solid var(--bg-gray);
@@ -126,10 +130,12 @@ header span {
 }
 
 .container .home .bottom .left > p::first-letter {
+  float: left;
+  padding: 0.2rem;
+  margin: 0.5rem 0.5rem 0 0;
   font-family: 'UnifrakturMaguntia';
   font-size: 4rem;
-  color: var(--bg-light);
-  background-color: var(--bg-dark);
+  color: var(--bg-dark);
 }
 
 .container .home .bottom .left > p {
@@ -151,7 +157,6 @@ header span {
 }
 
 .container .home .bottom .right {
-  width: 40%;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,7 +167,6 @@ header span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid var(--bg-dark);
 }
 
 .container .home .bottom .right:hover img {
@@ -227,9 +231,9 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 footer span {
@@ -379,6 +383,7 @@ footer .socials a:hover::after {
   }
   .container .home .bottom .right {
     width: 100%;
+    border: 1px solid var(--bg-dark);
   }
   footer span {
     font-size: 0.5rem;

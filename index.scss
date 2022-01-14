@@ -29,6 +29,11 @@ body {
   cursor: url('pen.png'), default;
 }
 
+main {
+  max-width: 1920px;
+  margin: auto;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -73,10 +78,9 @@ header {
       width: 100%;
       padding: 2rem 0;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       color: var(--bg-dark);
       .left {
-        width: 60%;
         padding-right: 2rem;
         margin-right: 2rem;
         border-right: 1px solid var(--bg-gray);
@@ -85,10 +89,12 @@ header {
           font-size: 6rem;
         }
         & > p::first-letter {
+          float: left;
+          padding: 0.2rem;
+          margin: 0.5rem 0.5rem 0 0;
           font-family: 'UnifrakturMaguntia';
           font-size: 4rem;
-          color: var(--bg-light);
-          background-color: var(--bg-dark);
+          color: var(--bg-dark);
         }
         & > p {
           max-width: 100%;
@@ -107,12 +113,10 @@ header {
         }
       }
       .right {
-        width: 40%;
         padding: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid var(--bg-dark);
         &:hover {
           img {
             transform: rotate(5deg);
@@ -167,7 +171,7 @@ footer {
   padding: 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   span {
     font-size: 1rem;
     color: var(--bg-dark);
@@ -264,6 +268,7 @@ footer {
       }
       .right {
         width: 100%;
+        border: 1px solid var(--bg-dark);
       }
     }
   }
